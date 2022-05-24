@@ -1,6 +1,6 @@
 // change the text in the placeholder
 function show(department) {
-    document.getElementById('input').placeholder = department;
+    document.getElementById('input').value = department;
 }
 
 // when the user clicks the drop down menu
@@ -23,19 +23,19 @@ function info(nameInp, idInp) {
 //register the student
 function validateForm() {
     // take parameters from dropdown menu and register
-    let department = document.getElementById('input').placeholder;
+    let department = document.getElementById('input');
 
     // check if the user enters a value or not
-    if (department === "Artifical Intelegence") {
-        department = "Artifical Intelegence";
-    } else if (department === "Computer Science") {
-        department = "Computer Science";
+    if (department.value === "Artifical Intelegence") {
+        return true;
+    } else if (department.value === "Computer Science") {
+        return true;
     } else if (department === "Decision Support") {
-        department = "Decision Support";
+        return true;
     } else if (department === "Information System") {
-        department = "Information System";
+        return true;
     } else if (department === "Information Technology") {
-        department = "Information Technology";
+        return true;
     } else {
         alert('Please select a department');
         return false;

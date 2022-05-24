@@ -46,7 +46,9 @@ def department(request):
         department = request.POST.get('department')
         # level =
 
+        print(name)
         print(id)
+        print(department)
 
         print("way down we go")
 
