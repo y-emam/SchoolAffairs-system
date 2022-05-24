@@ -15,4 +15,5 @@ class Student_Data (models.Model):
     mobile = models.CharField(max_length=20)
     DateOfBirth = models.DateField(
         auto_now_add=False, blank=False, null=False, auto_now=False)
-    department = models.CharField(max_length=40)
+    department = models.CharField(
+        max_length=40, default=None, null=True, blank=True)
