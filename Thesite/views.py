@@ -46,19 +46,10 @@ def department(request):
         department = request.POST.get('department')
 
         student = Student_Data.objects.get(SI=id)
+        student.department = department
+        student.save()
 
-        level = int(student.level)
-
-        # check for level and return response
-        if level == 3:
-            student.department = department
-            student.save()
-
-            return render(request, 'department_registeration.html', {'res': 'done'})
-        else:
-            print("You must be at level 3 to register")
-
-            return render(request, 'department_registeration.html', {'res': 'error'})
+        return redirect('search')
 
 
 def create(request):

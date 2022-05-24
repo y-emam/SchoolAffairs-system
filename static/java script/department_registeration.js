@@ -36,6 +36,8 @@ function validateForm() {
         return true;
     } else if (department === "Information Technology") {
         return true;
+    } else if (level !== 3) {
+        alert("You must be at level 3 to register");
     } else {
         alert('Please select a department');
         return false;
