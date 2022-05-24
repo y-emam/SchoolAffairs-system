@@ -1,0 +1,54 @@
+body {
+    padding: 50px 0 0 0;
+    margin: 0;
+    font-family: 'calibri';
+}
+
+/* the background of navigation bar */
+nav {
+    background-color: #29648a;
+    width: 100%;
+    height: 55px;
+    position: fixed;
+    top: 0;
+    z-index: 8;
+}
+
+/* styling the unordered list */
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+/* styling the the list */
+nav li {
+    margin-top: 18px;
+}
+
+nav li a {
+    margin-right: 12px;
+    display: inline;
+    padding: 8px 12px;
+    border-radius: 6px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease-out;
+}
+
+/* the current page */
+nav ul .active a {
+    background-color: #2e9cca;
+}
+
+
+/* when we hover over the an li tag */
+nav ul li a:hover {
+    background-color: #25274d;
+    font-weight: bold;
+}

@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--add a css stylesheet containing all css-->
+    <link rel="stylesheet" href="{%static 'CSS/department-registeration.css' %}">
+
+    <!--title of the page-->
+    <title>Department Registeration</title>
+</head>
+
+<body>
+    <!--title of the page-->
+    <div id="title">
+        <h1>Registeration</h1>
+    </div>
+    <!--information about the student-->
+    <div id="form">
+        <!-- Drop down menu -->
+        <form id="department-form" action="department" method="POST"
+                onsubmit="return validateForm()">
+            {%csrf_token%}
+            <div id="student-info-div">
+                <div class="name-div">
+                    <label for="name" class="info-title">Name:</label>
+                    <input name="name" type="text" class="info-data" id="name-data" readonly>
+                </div>
+                <div class="id-div">
+                    <label for="id" class="info-title">ID:</label>
+                    <input name="id" type="number" class="info-data" id="id-data" readonly >
+                </div>
+            </div>
+            <div id="department-div">
+                <h1>Choose a department</h1>
+                <div id="dropdown">
+                    <input type="text" id="input" placeholder="Choose a department...">
+                    <div id="departments">
+                        <div onclick="show('Artifical Intelegence')">Artifical Intelegence</div>
+                        <div onclick="show('Computer Science')">Computer Science</div>
+                        <div onclick="show('Decision Support')">Decision Support</div>
+                        <div onclick="show('Information System')">Information System</div>
+                        <div onclick="show('Information Technology')">Information Technology</div>
+                    </div>
+                </div>
+            </div>
+            <input class='btn' type='submit' value='Register'>
+        </div>
+    </div>
+    <!--import icons-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!--some javascript to use the drop down menu-->
+    <script src="{%static 'java script/department_registeration.js' %}"></script>
+</body>
+
+</html>

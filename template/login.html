@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> {%load static%}
+    <title>login</title>
+    <link rel="stylesheet" href="{%static 'CSS/login.css'%}" />
+    <script src="{%static 'java script/login.js'%}"></script>
+</head>
+
+<body>
+    <div class="img"></div>
+    <div class="text">
+        <form name="cont" method="post" action="home" onsubmit="return validate()">
+            {%csrf_token%}
+            <h1 style="text-align: center">Login</h1>
+            <div>
+                <label for="username"><b>Username</b></label>
+                <input id="user1" type="text" placeholder="Enter Username" name="username" required />
+            </div>
+            <br />
+            <div>
+                <label for="pass1"><b>Password</b></label>
+
+                <input id="pass1" type="password" placeholder="Enter Password" name="password" required />
+            </div>
+            <br />
+            <div>
+                <button type="submit" class="btn" onclick="validate() " id="b1">
+            Login
+          </button>
+                <input type="checkbox" id="submit" />
+                <label for="Remember">Remember me</label>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+.nav-links{
+    background-color:#25274D;
+    overflow:hidden;
+    box-shadow: 0 0 10px #25274D;
+}
+    
+    /* Style the links inside the navigation bar */
+.nav-links a{
+    float:left;
+    color:white;
+    text-align:center;
+    padding:14px 16px;
+    text-decoration:none;
+    font-size:17px;
+}
+    
+    /* Change the color of links on hover */
+.nav-links a:hover{
+     background-color:#2E9ccA;
+     color:#25274D;
+     box-shadow: 0 0 5px #2E9ccA;
+}
+
+#header{
+    font-family: "callibri";
+    font-size: 40px;
+    margin: 25px 45px ;
+}
+table {
+    width: 100%;
+  }
+
+th,td {
+    text-align: center;
+    padding: 12px;
+  }
+tr{
+    box-shadow: 0  0.5px 0.5px 0 #2e9bcab9;
+}
+td{
+    border-right: 1px solid #2e9bcab9;
+    border-bottom: 1px solid #2e9bca8f;
+}
+thead {
+    background-color:#178dbf;
+    color:white;
+    box-shadow: 0 0 5px #25274D;
+
+  }
+tbody tr:hover{
+    background-color:#d4d4de;
+
+}
+html{
+    background-color: #fdf9f6;
+}
+

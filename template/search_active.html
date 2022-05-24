@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Affairs</title>
+    <meta name="Project 2" content="Phase 1"> {%load static%}
+    <!-- linking to css files -->
+    <link rel="stylesheet" href="{%static 'CSS/search_active1.css'%}">
+    <link rel="stylesheet" href="{%static 'CSS/search_active2.css'%}">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+
+    <!-- navigation bar for the home page -->
+    <nav>
+        <ul>
+            <li><a href="home">Home</a></li>
+            <li><a href="view">Students</a></li>
+            <li><a href="add">Add</a></li>
+            <li><a href="search_edit">Edit</a></li>
+            <li class="active"><a href="search">Search</a></li>
+            <li><a href="login">logout</a></li>
+        </ul>
+    </nav>
+
+    <form action="" method="dialog">
+        <div class="active students">
+            <div class="Searching">
+                <input type="text" name="box" placeholder="Searching students by name.">
+                <i class="fa fa-search"></i>
+                <div class="tab">
+                    <button class="btn" type="submit">search</button>
+                    <div id="table">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="{%static 'java script/search_active.js' %}"></script>
+</body>
+
+</html>

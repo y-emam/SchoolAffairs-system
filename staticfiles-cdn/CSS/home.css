@@ -1,0 +1,157 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 50px 0 0 0;
+    margin: 0;
+    font-family: 'calibri';
+}
+
+
+/* the background of navigation bar */
+
+nav {
+    background-color: #29648a;
+    width: 100%;
+    height: 55px;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+
+/* styling the unordered list */
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+
+/* styling the the list */
+
+nav li {
+    margin-top: 18px;
+}
+
+nav li a {
+    margin-right: 12px;
+    display: inline;
+    padding: 8px 12px;
+    border-radius: 6px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease-out;
+}
+
+
+/* the current page */
+
+nav ul .active a {
+    background-color: #2e9cca;
+}
+
+
+/* when we hover over the an li tag */
+
+nav ul li a:hover {
+    background-color: #25274d;
+    font-weight: bold;
+}
+
+
+/* home image */
+
+#welcome_image_div {
+    position: relative;
+}
+
+#image_title {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-weight: bold;
+    font-size: 80px;
+}
+
+#image_text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 40px;
+}
+
+#scroll {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50px;
+    width: 280px;
+    border-width: 10px;
+    border-radius: 50px;
+    border-color: #2e9cca;
+    background-color: #2e9bca00;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease-out;
+}
+
+#scroll:hover {
+    border-width: 0;
+    background-color: #2e9bca;
+}
+
+.left_div {
+    padding: 100px 0 0 100px;
+    height: 360px;
+    width: 50%;
+}
+
+.right_div {
+    padding: 100px 0 0 50%;
+    height: 360px;
+    width: 50%;
+}
+
+h3 {
+    font-size: 50px;
+    color: #2e9bca;
+    font-weight: bold;
+}
+
+p {
+    font-size: 20px;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+.link {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 20px;
+    border-radius: 50px;
+    padding: 8px 18px;
+    background-color: #2e9bca;
+    color: rgb(255, 255, 255);
+    transition: all 0.3s ease-out;
+}
+
+.link:hover {
+    border-width: 0;
+    background-color: #25274d;
+    color: #fff;
+}

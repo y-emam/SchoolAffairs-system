@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {%load static%}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{%static 'CSS/add.css'%}">
+    <script src="https://kit.fontawesome.com/44a9a12877.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{%static 'CSS/nav.css'%}">
+    <title>Add</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="home">Home</a></li>
+            <li><a href="view">Students</a></li>
+            <li class="active"><a href="add">Add</a></li>
+            <li><a href="search_edit">Edit</a></li>
+            <li><a href="search">Search</a></li>
+            <li><a href="login">logout</a></li>
+        </ul>
+    </nav>
+    <form action="create" class="edit-form" id="form" method="POST">
+        {%csrf_token%}
+        <div class="form-header">
+            <h1>Student Information</h1>
+        </div>
+        <div class="form-body">
+            <div class="input" id="ID1">
+                <label for="ID" class="label-title">ID</label>
+                <i class="fa-solid fa-circle-check"></i>
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <input class="form-input " type="text" placeholder="Enter the ID" name="ID" autofocus id="ID">
+                <small id="ID-error"></small>
+            </div>
+
+            <div class="input" id="name">
+                <label for="Name" class="label-title">Name</label>
+                <input class="form-input" type="text" placeholder="Enter the name " name="name" id="Name">
+                <i class="fa-solid fa-circle-check"></i>
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <small id="name-error"></small>
+            </div>
+
+            <div class="input">
+                <label for="brith" class="label-title">Date of birth</label>
+                <input class="form-input" type="date" id="brith" required name="date of brith">
+            </div>
+
+            <div class="input">
+                <label for="GPA" class="label-title">GPA</label>
+                <input class="form-input" type="number" id="contact-gpa" min="0.0" max="4.0" step="0.01" required name="GPA">
+            </div>
+
+            <div class="input">
+                <label for="gender" class="label-title">Gender</label>
+                <select name="gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+
+            <div class="input">
+                <label for="level" class="label-title">Level</label>
+                <input type="number" name="level" id="contact-level" required class="form-input" min="1" max="10" step="1">
+            </div>
+
+            <div class="input">
+                <label for="status" class="label-title">status</label>
+                <select name="status">
+                    <option value="active">active</option>
+                    <option value="inactive">inactive</option>
+                </select>
+            </div>
+
+            <div class="input">
+                <label for="department" class="label-title">department</label>
+                <select name="department">
+                    <option value="CS"> CS</option>
+                    <option value="IS">IS</option>
+                </select>
+            </div>
+            <div class="input">
+                <label class="label-title" for="email">Email</label>
+                <input type="text " name="email" class="form-input" placeholder="Enter email" id="email">
+                <i class="fa-solid fa-circle-check"></i>
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <small id="small"></small>
+            </div>
+            <div class="input">
+                <label for="mobile" class="label-title">Mobile number</label>
+                <input type="text" name="mobile" id="mobile" class="form-input" placeholder="Enter your number">
+                <i class="fa-solid fa-circle-check"></i>
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <small id="phone-error"></small>
+            </div>
+            <div class="form-footer">
+                <button type="submit" class="btn">Add</button>
+                <span id="sumbit-error"></span>
+            </div>
+
+        </div>
+    </form>
+    <script src="{%static 'java script/add.js'%}">
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.img {
+    /* The image used */
+    background-image: url(../image/background1.jfif);
+    /* Add the blur effect 
+  filter: blur(4px);*/
+    /* Full height */
+    height: 150%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100% 100%;
+}
+
+
+/* Position text in the middle of the page/image */
+
+.text {
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 5px inset #ceb9b9;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    width: 50%;
+    padding: 2s0px;
+    text-align: center;
+    border-top-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    margin-top: 150px;
+}
+
+
+/* Full-width input fields */
+
+input[type=text],
+input[type=password] {
+    width: 50%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #131212;
+    color: rgb(253, 251, 251);
+    box-shadow: 0 0 5px;
+}
+
+input[type=text]:focus,
+input[type=password]:focus {
+    background-color: rgb(185, 169, 169);
+    color: rgb(17, 17, 17);
+    outline: none;
+}
+
+
+/* Set a style for the submit button */
+
+.btn {
+    background-color: #1668c7;
+    color: rgb(255, 255, 255);
+    padding: 16px 20px;
+    border: hidden;
+    cursor: pointer;
+    width: 20%;
+    opacity: 0.9;
+    margin: 5px 0 22px 0;
+}
+
+.btn:hover {
+    opacity: 1;
+}

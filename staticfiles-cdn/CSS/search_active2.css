@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* .header {
+    min-height: 0vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(12, 85, 131, 0.7), rgba(12, 85, 131, 0.7));
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+} */
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}

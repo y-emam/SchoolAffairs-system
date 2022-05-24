@@ -1,0 +1,150 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-color: #AAABB8;
+    padding: 50px 0 0 0;
+    margin: 0;
+    text-align: center;
+    font-family: 'calibri';
+}
+
+table {
+    position: absolute;
+    z-index: 1;
+    left: -50%;
+    top: 90%;
+    transform: translate(0, 0);
+    width: 200%;
+    background: #eaeaea;
+    text-align: center;
+    border-collapse: collapse;
+    border-spacing: 0;
+    box-shadow: 0 5px 5px #085769;
+}
+
+th {
+    background: #29648a;
+    color: #ffffff;
+}
+
+th,
+td {
+    padding: 5px 12px;
+}
+
+tr:nth-child(odd) {
+    background-color: #b1a9a9;
+}
+
+.Searching {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.cont {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.btn {
+    color: #ffffff;
+    background: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    margin: 10px;
+    background-color: #29648a;
+}
+
+.btn:active {
+    background-color: #2e9cca;
+}
+
+.btn:hover {
+    background-color: #25274d;
+}
+
+input {
+    border: 3px solid #1e432e;
+    height: 40px;
+    width: 300px;
+    border-radius: 50px;
+    padding: 0px 10px;
+}
+
+button {
+    padding: 10px 20px;
+}
+
+#table {
+    display: block;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+
+/* the background of navigation bar */
+
+nav {
+    background-color: #29648a;
+    width: 100%;
+    height: 55px;
+    position: fixed;
+    top: 0;
+}
+
+
+/* styling the unordered list */
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+
+/* styling the the list */
+
+nav li {
+    margin-top: 18px;
+}
+
+nav li a {
+    margin-right: 12px;
+    display: inline;
+    padding: 8px 12px;
+    border-radius: 6px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease-out;
+}
+
+
+/* the current page */
+
+nav ul .active a {
+    background-color: #2e9cca;
+}
+
+
+/* when we hover over the an li tag */
+
+nav ul li a:hover {
+    background-color: #25274d;
+    font-weight: bold;
+}

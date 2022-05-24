@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> {%load static%}
+    <link rel="stylesheet" href="{%static 'CSS/edit.css'%}">
+    <link rel="stylesheet" href="{%static 'CSS/nav.css'%}">
+    <script src="https://kit.fontawesome.com/44a9a12877.js" crossorigin="anonymous"></script>
+    <title>Edit</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="home">Home</a></li>
+            <li><a href="view">Students</a></li>
+            <li><a href="add">Add</a></li>
+            <li class="active"><a href="search_edit">Edit</a></li>
+            <li><a href="search">Search</a></li>
+            <li><a href="login">logout</a></li>
+        </ul>
+    </nav>
+
+    <form class="edit-form" id="form" method="get" action="">
+
+        <div class="form-header">
+            <h1>Student Information</h1>
+        </div>
+        <div class="form-body">
+
+            <div class="input">
+                <label for="username" class="label-title">ID</label>
+                <input type="text" id="ID1" class="form-input" required name="ID" readonly value="20202020">
+
+            </div>
+            <div class="input">
+
+                <label for="username" class="label-title">Name</label>
+                <input type="text" id="name" class="form-input" value="Student1" name="name" readonly>
+            </div>
+            <div class="input">
+                <label for="username" class="label-title">Date of birth</label>
+                <input type="date" id="brith" value="2000-01-08" class="form-input" name="date-of-birth" readonly>
+            </div>
+            <div class="input">
+                <label for="username" class="label-title">GPA</label>
+                <input type="number" id="GPA" class="form-input" min="0.0" max="4.0" step="0.01" name="GPA" value="3.26">
+            </div>
+            <div class="input">
+                <label for="username" class="label-title">Gender</label>
+                <select name="gender" id="gender" disabled>
+
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <div class="input">
+                <label for="username" class="label-title">Level</label>
+                <input type="number" step="1" class="form-input" value="2" min="1" max="10">
+            </div>
+            <div class="input">
+                <label for="username" class="label-title">Status</label>
+                <select name="status">
+                    <option value="active">active</option>
+                    <option value="inactive">inactive</option>
+                </select>
+            </div>
+            <div class="input">
+                <label for="username" class="label-title">Department</label>
+                <select name="department" disabled>
+                    <option value="CS">CS</option>
+                    <option value="IS">IS</option>
+                </select>
+            </div>
+            <div class="input">
+                <label for="username" class="label-title">Email</label>
+                <input type="text " class="form-input" placeholder="Enter email" id="email" value="test@test.com">
+                <i class="fa-solid fa-circle-check"></i>
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <!-- <small id="smallEmail"></small> -->
+                <div class="error"></div>
+            </div>
+            <div class="input">
+                <label for="phone" class="label-title">Mobile number</label>
+
+                <input type="text" id="mobile" class="form-input" value="11111111111" />
+                <i class="fa-solid fa-circle-check"></i>
+                <i class="fa-solid fa-circle-exclamation"></i>
+
+                <div class="error"></div>
+            </div>
+            <div class="form-footer">
+                <button type="submit" class="btn" onclick="updated()">Update</button>
+                <button type=" button" class="btn" onclick="deleted()">Delete</button>
+            </div>
+        </div>
+
+    </form>
+
+    <script src="{%static 'java script/edit .js'%}"></script>
+</body>
+
+</html>

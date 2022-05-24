@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- linking to css file -->
+    {%load static%}
+    <link rel="stylesheet" href="{%static 'CSS/home.css'%}">
+    <title>Home</title>
+</head>
+
+<body>
+    <!-- navigation bar for the home page -->
+    <nav>
+        <!-- <img src="WhatsApp Image 2022-04-30 at 3.16.53 PM.jpeg" alt="school_affairs_logo"
+        width="100" height="55"> -->
+        <ul>
+            <li class="active"><a href="home">Home</a></li>
+            <li><a href="view">Students</a></li>
+            <li><a href="add">Add</a></li>
+            <li><a href="search_edit">Edit</a></li>
+            <li><a href="search">Register</a></li>
+            <li><a href="login">logout</a></li>
+        </ul>
+    </nav>
+
+    <div id="welcome_image_div">
+        <img src="{%static 'image/6b6cbd7bad0d8bade0c2cf6c70ec62ac_2.jpg'%}" id="welcome_image" alt="school_affairs_home">
+        <div id="image_title">School affairs</div>
+        <div id="image_text">Manage your school system digitally</div>
+        <button id="scroll">Know more</button>
+    </div>
+
+    <div id="add_div" class="left_div">
+        <h3>ADD STUDENTS</h3>
+        <p>The site gives you the functionality to add new students <br/> to the sytem.</p>
+        <a class="link" href="add">Add Students</a>
+    </div>
+    <div id="edit_div" class="right_div">
+        <h3>EDIT STUDENTS</h3>
+        <p>You can also edit information of students.</p>
+        <a class="link" href="search">Edit Students</a>
+    </div>
+    <div id="search_div" class="left_div">
+        <h3>SEARCH FOR STUDENTS AND REGISTER</h3>
+        <p>In addition to the search functionality and Register them to a certian Department.</p>
+        <a class="link" href="search">Search for students</a>
+    </div>
+    <div class="right_div">
+        <h3>CHANGE STUDENTS' STATUS</h3>
+        <p>And when they graduate, change their activity to make<br> the school affairs focus on the remaining students.</p>
+        <a class="link" href="view">Search for Students</a>
+    </div>
+    <script src="{%static 'java script/home.js' %}"></script>
+</body>
+
+</html>
