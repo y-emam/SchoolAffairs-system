@@ -3,20 +3,6 @@
 let btnget = document.querySelector('button');
 let mytable = document.querySelector('#table');
 
-// create a dummy data of students
-let students = [
-    {
-        'Number': '1', 'Name': 'Yasser', 'ID': '20201010'
-    },
-    {
-        'Number': '2', 'Name': 'Saad', 'ID': '20201020'
-    }, {
-        'Number': '3', 'Name': 'Reem', 'ID': '20201030'
-    }, {
-        'Number': '4', 'Name': 'Ahmed', 'ID': '20201040'
-    }
-]
-
 // headers of table
 let headers = ['Number', 'Name', 'ID', 'Register'];
 

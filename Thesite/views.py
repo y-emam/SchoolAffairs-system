@@ -33,15 +33,18 @@ def search(request):
     if request.method == 'GET':
         return render(request, 'search_active.html')
     if request.method == 'POST':
-        ID = request.POST.get('id')
-        checker = Student_Data.objects.filter(SI=ID).exists()
-        print(checker)
+        name = request.POST.get('name')
+        checker = Student_Data.objects.filter(
+            name=name, status='active').exists()
+        context = {
+            'isEmpty': True,
+        }
         if checker:
-            student = Student_Data.objects.get(SI=ID)
+            students = Student_Data.objects.filter(name=name)
             context = {
-                'mystudent': student,
+                'students': students,
+                'isEmpty': False,
             }
-
             return render(request, 'search_active.html', context)
 
         else:

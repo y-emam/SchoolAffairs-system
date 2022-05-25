@@ -33,11 +33,31 @@
         {% csrf_token %}
         <div class="active students">
             <div class="Searching">
-                <input type="text" name="id" placeholder="Searching students by name.">
+                <input type="text" name="name" placeholder="Searching students by name.">
                 <i class="fa fa-search"></i>
                 <div class="tab">
                     <button class="btn" type="submit">search</button>
                     <div id="table">
+                        <table>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Level</th>
+                                <th>Register</th>
+                            </tr>
+                            {% if isEmpty == False %}
+                            {% for student in students %}
+                                <tr>
+                                    <td>{{student.SI}}</td>
+                                    <td>{{student.name}}</td>
+                                    <td>{{student.level}}</td>
+                                    <td>
+                                        <a href="department?name={{student.name}}&id={{student.SI}}&level={{student.level}}">Register</a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                            {% endif %}
+                        </table>
                     </div>
                 </div>
             </div>

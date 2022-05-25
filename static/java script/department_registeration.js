@@ -24,26 +24,23 @@ function info(nameInp, idInp) {
 function validateForm() {
     // take parameters from dropdown menu and register
     let department = document.getElementById('input');
+    let level = getLevel();
+
+    console.log(level);
 
     // check if the user enters a value or not
-    if (department.value === "Artifical Intelegence") {
-        return true;
-    } else if (department.value === "Computer Science") {
-        return true;
-    } else if (department === "Decision Support") {
-        return true;
-    } else if (department === "Information System") {
-        return true;
-    } else if (department === "Information Technology") {
-        return true;
-    } else if (level !== 3) {
+    if (level !== '3') {
         alert("You must be at level 3 to register");
+        return false;
+    } else if (department.value === "Artifical Intelegence" || department.value === "Computer Science"
+        || department.value === "Decision Support" || department.value === "Information System"
+        || department.value === "Cyber Security") {
+        return true;
     } else {
         alert('Please select a department');
         return false;
     }
     
-    return true
 }
 
 // this function returns the name of the student
@@ -58,4 +55,11 @@ function getId() {
     let params = new URLSearchParams(location.search);
 
     return params.get('id');
+}
+
+// this function returns the level of the student
+function getLevel() {
+    let params = new URLSearchParams(location.search);
+
+    return params.get('level');
 }
