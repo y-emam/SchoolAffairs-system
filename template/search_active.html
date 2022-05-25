@@ -29,10 +29,11 @@
         </ul>
     </nav>
 
-    <form action="" method="dialog">
+    <form action="search" method="POST">
+        {% csrf_token %}
         <div class="active students">
             <div class="Searching">
-                <input type="text" name="box" placeholder="Searching students by name.">
+                <input type="text" name="id" placeholder="Searching students by name.">
                 <i class="fa fa-search"></i>
                 <div class="tab">
                     <button class="btn" type="submit">search</button>

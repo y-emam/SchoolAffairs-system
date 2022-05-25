@@ -30,7 +30,22 @@ def view(request):
 
 
 def search(request):
-    return render(request, 'search_active.html')
+    if request.method == 'GET':
+        return render(request, 'search_active.html')
+    if request.method == 'POST':
+        ID = request.POST.get('id')
+        checker = Student_Data.objects.filter(SI=ID).exists()
+        print(checker)
+        if checker:
+            student = Student_Data.objects.get(SI=ID)
+            context = {
+                'mystudent': student,
+            }
+
+            return render(request, 'search_active.html', context)
+
+        else:
+            return redirect('search')
 
 
 def search_edit(request):
